@@ -236,25 +236,25 @@
       </div>
       <div class="rsvp-right reveal delay-2">
         <p class="rsvp-sub">Please fill out the form and kindly confirm your attendance.</p>
-        <form class="rsvp-form" id="rsvp-form">
+        <form class="rsvp-form" id="rsvp-form" action="https://formspree.io/f/mvoeljyw" method="POST">
           <div class="form-group">
-            <input type="text" id="rsvp-name" placeholder="Your Full Name" required />
+            <input type="text" id="rsvp-name" name="name" placeholder="Your Full Name" required />
           </div>
           <div class="form-group">
-            <input type="email" id="rsvp-email" placeholder="Your Email Address" required />
+            <input type="email" id="rsvp-email" name="email" placeholder="Your Email Address" required />
           </div>
           <div class="form-group">
-            <select id="rsvp-attendance">
+            <select id="rsvp-attendance" name="attendance" required>
               <option value="" disabled selected>Will you attend?</option>
               <option value="yes">Joyfully Accepts</option>
               <option value="no">Regretfully Declines</option>
             </select>
           </div>
           <div class="form-group">
-            <input type="number" id="rsvp-guests" placeholder="Number of Guests" min="1" max="10" />
+            <input type="number" id="rsvp-guests" name="guests" placeholder="Number of Guests" min="1" max="10" />
           </div>
           <div class="form-group">
-            <textarea id="rsvp-message" placeholder="Message for the couple (optional)" rows="3"></textarea>
+            <textarea id="rsvp-message" name="message" placeholder="Message for the couple (optional)" rows="3"></textarea>
           </div>
           <button type="submit" class="rsvp-submit-btn" id="rsvp-submit">RSVP</button>
         </form>
